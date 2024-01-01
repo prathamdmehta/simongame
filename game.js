@@ -1,4 +1,3 @@
-
 var buttonColours = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
@@ -76,4 +75,24 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+}
+
+$("#start-btn").on("click", function() {
+  startGame();
+});
+
+function startGame() {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+}
+$("#start-btn").hide(); // or .prop('disabled', true);
+
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
+  $("#start-btn").show(); // or .prop('disabled', false);
 }
