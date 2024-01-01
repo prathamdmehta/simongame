@@ -36,7 +36,7 @@ function checkAnswer(currentLevel) {
     } else {
       playSound("wrong");
       $("body").addClass("game-over");
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Press the Key to Restart");
 
       setTimeout(function () {
         $("body").removeClass("game-over");
@@ -87,12 +87,12 @@ function startGame() {
     nextSequence();
     started = true;
   }
+  $("#start-btn").hide();
 }
-$("#start-btn").hide(); // or .prop('disabled', true);
 
 function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
-  $("#start-btn").show(); // or .prop('disabled', false);
+  $("#start-btn").show();
 }
