@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
 body {
   text-align: center;
   background-color: #011F3F;
@@ -5,7 +11,7 @@ body {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   margin:  5%;
   color: #FEF2BF;
 }
@@ -54,10 +60,23 @@ body {
 
 h1{
   text-align: center;
-  margin-top: 6rem;
+  margin: 4rem 0 4rem 0;
+
   color: #FEF2BF;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+#start-btn{
+  margin-top: -10rem;
+  padding: 15px;
+  border-radius: 4rem;
+  cursor: pointer;
+  background-color: #FEF2BF;
+  border: 4px solid black;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
 
 @media only screen and (max-width: 600px) {
   body {
